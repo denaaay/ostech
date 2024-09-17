@@ -1,8 +1,9 @@
 import OstechIcon from '../../assets/icon/ostechIcon.png';
+import Button from '../additional/Button';
 
-function Navbar() {
+function Navbar(props) {
     return(
-        <div className="w-screen h-max fixed flex justify-between items-center font-primaryFont text-black py-6 px-12">
+        <div className={`w-screen h-max fixed flex justify-between items-center font-primaryFont text-black py-6 px-12 z-50 ${props.scrolled && 'bg-black'} transition duration-500 ease-linear`}>
             {/* Logo */}
             <div className='flex-1 h-max flex justify-start'>
                 <div className='w-max h-[50px]'>
@@ -20,9 +21,7 @@ function Navbar() {
             
             {/* Contact Us Button */}
             <div className='flex-1 h-max flex justify-end'>
-                <button className='bg-transparent rounded-full border-[1px] border-white px-6 py-2 text-white text-xl opacity-80'>
-                    CONTACT US
-                </button>
+                <Button title="CONTACT US"/>
             </div>
         </div>
     );

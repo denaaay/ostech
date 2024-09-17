@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Laptop from '../../assets/images/landingImage1.png';
 import Ipad from '../../assets/images/landingImage2.png';
 import Phone from '../../assets/images/landingImage3.png';
+import Button from "../additional/Button";
 
 function Home() {
     return(
@@ -22,9 +23,7 @@ function Home() {
                     </div>
                     <div className="w-max h-max flex flex-col items-end gap-2 font-secondaryFont text-3xl text-end">
                         <p>Turning Ideas into Digital Realities.</p>
-                        <button className='bg-transparent rounded-full border-[1px] border-white px-6 py-2 text-white text-xl opacity-80 font-primaryFont'>
-                            VIEW PORTFOLIOS
-                        </button>
+                        <Button title="VIEW PORTFOLIOS"/>
                     </div>
 
                     {/* Additional Images */}
