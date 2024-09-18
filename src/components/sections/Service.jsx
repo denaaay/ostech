@@ -20,7 +20,7 @@ function Service() {
     }, []);
 
     return(
-        <div className="w-[75vw] h-max flex flex-col justify-center items-center gap-10 mt-12">
+        <div className="w-[75vw] h-max flex flex-col justify-center items-center gap-10 mt-32">
             {/* Service Title */}
             <div className="w-full h-max font-secondaryFont text-[84px] leading-none flex justify-center">
                 <p><span className="text-secondaryColor">our</span> service</p>

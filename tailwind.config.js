@@ -10,6 +10,7 @@ export default {
       colors: {
         primaryColor: '#000000',
         secondaryColor: '#FFBD59',
+        customBgGradient: 'rgba(108, 108, 108, 0.15)',
       }
     },
       fontFamily: {

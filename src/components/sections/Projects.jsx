@@ -35,7 +35,7 @@ function Projects() {
             <div className="w-full h-max flex gap-10">
                 {/* Project Content Detail */}
                 <div className="w-[300px] flex flex-col justify-between items-start" style={{ height: divHeight }}>
-                    <Button title='Go more'/>
+                    <Button title='GO MORE'/>
                     <p className="font-primaryFont text-xl text-justify">Your Vision Deserves a Platform. We Create Custom Websites that Reflect Your Brand, Engage Your Audience, and Propel Your Business Forward.</p>
                 </div>
 

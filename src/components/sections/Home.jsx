@@ -19,7 +19,7 @@ function Home() {
                 {/* Landing Main Content */}
                 <div className="w-full flex-1 flex flex-col justify-between items-end relative">
                     <div className="w-[73%] h-max flex justify-end font-secondaryFont text-2xl text-end">
-                        <p>At <span className="text-secondaryColor">Orange</span> Sphere Technology, we are a passionate team of IT professionals dedicated to helping businesses thrive in the digital world. Founded by experts in web and mobile development, UI/UX design, and innovative IT solutions, our agency offers a range of services tailored to meet the unique needs of each client.</p>
+                        <p>At <span className="text-secondaryColor">Orange Sphere Technology</span>, we are a dedicated team of IT experts in web and mobile development, UI/UX design, and innovative solutions. We provide tailored services to help businesses succeed in the digital world.</p>
                     </div>
                     <div className="w-max h-max flex flex-col items-end gap-2 font-secondaryFont text-3xl text-end">
                         <p>Turning Ideas into Digital Realities.</p>
