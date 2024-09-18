@@ -20,7 +20,7 @@ function Service() {
     }, []);
 
     return(
-        <div className="w-[75vw] h-max flex flex-col justify-center items-center gap-12 mt-10">
+        <div className="w-[75vw] h-max flex flex-col justify-center items-center gap-10 mt-12">
             {/* Service Title */}
             <div className="w-full h-max font-secondaryFont text-[84px] leading-none flex justify-center">
                 <p><span className="text-secondaryColor">our</span> service</p>
@@ -40,11 +40,11 @@ function Service() {
                     </div>
                 </div>
 
-                {/* Service Mobile Dev */}
+                {/* Service UI/UX */}
                 <div className="flex-1 h-max flex flex-col">
                     <div className="w-full h-max flex flex-col justify-center items-center font-secondaryFont text-4xl">
-                        <p>mobile</p>
-                        <p>development</p>
+                        <p>ui/ux</p>
+                        <p>design & prototype</p>
                     </div>
 
                     <div className="w-full px-12 py-10 font-primaryFont text-2xl text-justify leading-10 border-white border-l-[2px] border-r-[2px]" style={{ height: divHeight }}>
@@ -52,11 +52,11 @@ function Service() {
                     </div>
                 </div>
 
-                {/* Service UI/UX */}
+                {/* Service Mobile Dev */}
                 <div className="flex-1 h-max flex flex-col">
                     <div className="w-full h-max flex flex-col justify-center items-center font-secondaryFont text-4xl">
-                        <p>ui/ux</p>
-                        <p>design & prototype</p>
+                        <p>mobile</p>
+                        <p>development</p>
                     </div>
 
                     <div className="w-full h-max px-12 py-10 font-primaryFont text-2xl text-justify leading-10">
