@@ -1,4 +1,5 @@
 import AboutUs from "../components/sections/AboutUs";
+import ContactUs from "../components/sections/ContactUs";
 import Footer from "../components/sections/Footer";
 import Home from "../components/sections/Home";
 import Navbar from "../components/sections/Navbar";
@@ -14,6 +15,7 @@ function Landing(props) {
                 <Service />
                 <Projects />
                 <AboutUs />
+                <ContactUs />
             </div>
             <Footer />
         </div>
