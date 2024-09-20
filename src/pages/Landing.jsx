@@ -5,6 +5,7 @@ import Home from "../components/sections/Home";
 import Navbar from "../components/sections/Navbar";
 import Projects from "../components/sections/Projects";
 import Service from "../components/sections/Service";
+import Testimonial from "../components/sections/Testimonial";
 
 function Landing(props) {
     return(
@@ -15,6 +16,7 @@ function Landing(props) {
                 <Service />
                 <Projects />
                 <AboutUs />
+                <Testimonial />
                 <ContactUs />
             </div>
             <Footer />
