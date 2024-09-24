@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import { useEffect, useState } from 'react';
+import './global.css';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);

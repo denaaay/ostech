@@ -3,16 +3,28 @@ import Laptop from '../../assets/images/landingImage1.png';
 import Ipad from '../../assets/images/landingImage2.png';
 import Phone from '../../assets/images/landingImage3.png';
 import Button from "../additional/Button";
+import React, { useEffect, useState } from "react";
 
-function Home() {
+const Home = React.forwardRef((props, ref) => {
+    const words = ['improve', 'scale up', 'build']
+    const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentWordIndex((previndex) => (previndex + 1) % words.length);
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, [])
+
     return(
-        <div className="w-screen h-screen bg-landingBackground bg-center bg-cover flex justify-center items-end">
+        <div className="w-screen h-screen bg-landingBackground bg-center bg-cover flex justify-center items-end" id={props.id} ref={ref}>
             {/* Landing Content */}
             <div className="w-[75vw] h-[90vh] py-8 flex flex-col justify-between items-center gap-4">
 
                 {/* Landing Tagline */}
                 <div className="w-full h-max font-secondaryFont text-[84px] leading-none flex flex-col">
-                    <p><span>improve</span> website business</p>
+                    <p><span className="bg-gradient-to-r from-white to-secondaryColor bg-clip-text text-transparent transition-all duration-500">{words[currentWordIndex]}</span> website business</p>
                     <p>with us.</p>
                 </div>
 
@@ -23,7 +35,7 @@ function Home() {
                     </div>
                     <div className="w-max h-max flex flex-col items-end gap-2 font-secondaryFont text-3xl text-end">
                         <p>Turning Ideas into Digital Realities.</p>
-                        <Button title="VIEW PORTFOLIOS"/>
+                        {/* <Button title="VIEW PORTFOLIOS"/> */}
                     </div>
 
                     {/* Additional Images */}
@@ -48,6 +60,6 @@ function Home() {
             </div>
         </div>
     );
-}
+});
 
 export default Home;

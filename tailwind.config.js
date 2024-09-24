@@ -6,6 +6,10 @@ export default {
     extend: {
       backgroundImage: {
         landingBackground: 'url("../src/assets/images/landingBackground.png")',
+        mojaveBackground: 'url("../src/assets/images/portfolios/mojave/mojaveBackground.jpg")',
+        upcycleBackground: 'url("../src/assets/images/portfolios/upcycle/upcycleBackground.jpg")',
+        skillearnBackground: 'url("../src/assets/images/portfolios/skillearn/skillearnBackground.png")',
+        supportinBackground: 'url("../src/assets/images/portfolios/supportin/supportinBackground.jpg")',
       },
       colors: {
         primaryColor: '#000000',

@@ -13,15 +13,15 @@ function Navbar(props) {
 
             {/* Navbar Button */}
             <div className="flex-[4] h-max flex items-center text-2xl gap-20 flex justify-center text-white">
-                <p>Home</p>
-                <p className='opacity-50'>Service</p>
-                <p className='opacity-50'>Projects</p>
-                <p className='opacity-50'>About Us</p>
+                <a className={`${props.visibleSection === 'home' ? 'opacity-100 cursor-default' : 'opacity-50'} cursor-pointer hover:opacity-100 transition duration-500 decoration-none`} href='#home'>Home</a>
+                <a className={`${props.visibleSection === 'service' ? 'opacity-100 cursor-default' : 'opacity-50'} cursor-pointer hover:opacity-100 transition duration-500 decoration-none`} href='#service'>Service</a>
+                <a className={`${props.visibleSection === 'projects' ? 'opacity-100 cursor-default' : 'opacity-50'} cursor-pointer hover:opacity-100 transition duration-500 decoration-none`} href='#projects'>Projects</a>
+                <a className={`${props.visibleSection === 'aboutUs' ? 'opacity-100 cursor-default' : 'opacity-50'} cursor-pointer hover:opacity-100 transition duration-500 decoration-none`} href='#aboutUs'>About Us</a>
             </div>
             
             {/* Contact Us Button */}
             <div className='flex-1 h-max flex justify-end'>
-                <Button title="CONTACT US"/>
+                <Button title="CONTACT US" id='wa'/>
             </div>
         </div>
     );
