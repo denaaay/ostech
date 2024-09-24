@@ -7,6 +7,7 @@ import Navbar from "../components/sections/Navbar";
 import Projects from "../components/sections/Projects";
 import Service from "../components/sections/Service";
 import Testimonial from "../components/sections/Testimonial";
+import CommingSoon from "../components/additional/CommingSoon";
 
 function Landing(props) {
     const [visibleSections, setVisibleSections] = useState({});
@@ -53,17 +54,22 @@ function Landing(props) {
           };
     }, []);
     return(
-        <div className="w-screen h-max scroll-smooth">
-            <Navbar scrolled={props.scrolled} visibleSection={visibleSections[0]}/>
-            <Home id='home' ref={homeRef}/>
-            <div className="w-screen h-max bg-black flex flex-col justify-start items-center pb-32">
-                <Service id='service' ref={serviceRef}/>
-                <Projects id='projects' ref={projectsRef}/>
-                <AboutUs id='aboutUs' ref={aboutUsRef}/>
-                <Testimonial />
-                <ContactUs id='contactUs' ref={contactUsRef}/>
-            </div>
-            <Footer />
+        <div className="w-screen h-max">
+            {window.matchMedia("(max-width: 1024px)").matches ? 
+                <CommingSoon /> :
+                <div className="w-screen h-max scroll-smooth">
+                    <Navbar scrolled={props.scrolled} visibleSection={visibleSections[0]}/>
+                    <Home id='home' ref={homeRef}/>
+                    <div className="w-screen h-max bg-black flex flex-col justify-start items-center pb-32">
+                        <Service id='service' ref={serviceRef}/>
+                        <Projects id='projects' ref={projectsRef}/>
+                        <AboutUs id='aboutUs' ref={aboutUsRef}/>
+                        <Testimonial />
+                        <ContactUs id='contactUs' ref={contactUsRef}/>
+                    </div>
+                    <Footer />
+                </div>
+            }
         </div>
     );
 }
