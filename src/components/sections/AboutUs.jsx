@@ -19,7 +19,7 @@ const AboutUs = React.forwardRef((props, ref) => {
                     {/* Goals */}
                     <div className="flex-1 h-max bg-customBgGradient rounded-xl border-white border-[1px] flex flex-col items-center p-8 gap-8">
                         <p className="font-secondaryFont text-white text-5xl">Goals<span className="text-secondaryColor">.</span></p>
-                        <p className="font-primaryFont text-white text-2xl text-justify">Our goal is to empower businesses with innovative, tailored IT solutions. We focus on driving growth through expert web and mobile development, while delivering seamless user experiences with cutting-edge UI/UX design. Our commitment is to build lasting client partnerships by consistently delivering high-quality service and ensuring success in every project</p>
+                        <p className="font-primaryFont text-white text-2xl text-justify">Our goal is to empower businesses with innovative, tailored IT solutions. We focus on driving growth through expert web and mobile development, while delivering seamless user experiences with cutting-edge UI/UX design. Our commitment is to build lasting client partnerships by consistently delivering high-quality service and ensuring success in every project.</p>
                     </div>
 
                     {/* Values */}
