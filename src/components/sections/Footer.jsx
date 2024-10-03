@@ -10,6 +10,8 @@ function Footer() {
             window.open('https://wa.me/+6281298673656', '_blank');
         } else if (e === 'pricing') {
             window.open('https://www.canva.com/design/DAGP5NcQG2A/2fEL7LVwUBQRN1YAIwsxEg/view?utm_content=DAGP5NcQG2A&utm_campaign=designshare&utm_medium=link&utm_source=editor', '_blank')
+        } else if (e === 'fiverr') {
+            window.open('https://www.fiverr.com/s/akdlYGg', '_blank')
         }
     }
 
@@ -22,7 +24,7 @@ function Footer() {
                 </div>
                 <div className='w-max h-max flex items-center text-xl gap-16 flex justify-center text-white font-thin'>
                     <p className='cursor-pointer opacity-50 hover:opacity-100' onClick={() => handleClick('pricing')}>Pricing</p>
-                    <p className='opacity-100'>Our Gig on Fiverr</p>
+                    <p className='cursor-pointer opacity-50 hover:opacity-100' onClick={() => handleClick('fiverr')}>Our Gig on Fiverr</p>
                 </div>
             </div>
 

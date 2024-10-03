@@ -75,7 +75,7 @@ const ContactUs = React.forwardRef((props, ref) => {
 
         try {
             await fetch(
-                'https://script.google.com/macros/s/AKfycbx0rGte9wG8m2UNLiTQuVFvUXY8t58eyoaxGtowoHU1Ur-LhINKJM-kXUfPXCQ_cGYQ/exec',{
+                import.meta.env.VITE_API_APPSCRIPT,{
                     method: 'POST',
                     mode: 'no-cors',
                     body: formData,
