@@ -136,14 +136,14 @@ const ContactUs = React.forwardRef((props, ref) => {
                             {/* Input Name */}
                             <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-2xl">
                                 <label>Name & Company</label>
-                                <input type="text" placeholder="Your Name" name="name" value={name} onChange={(e) => {setName(e.target.value)}} className="w-[50%] focus:outline-none text-[#6b6b6b]"/>
+                                <input type="text" placeholder="Your Name" name="name" value={name} onChange={(e) => {setName(e.target.value)}} className="w-full focus:outline-none text-[#6b6b6b]"/>
                                 <div className="w-full h-[1px] bg-primaryColor"></div>
                             </div>
 
                             {/* Input Email */}
                             <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-2xl">
                                 <label>Your Email</label>
-                                <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} className="w-[50%] focus:outline-none text-[#6b6b6b]" placeholder="dxxxxx@gmail.com"/>
+                                <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} className="w-full focus:outline-none text-[#6b6b6b]" placeholder="dxxxxx@gmail.com"/>
                                 <div className="w-full h-[1px] bg-primaryColor"></div>
                             </div>
 
