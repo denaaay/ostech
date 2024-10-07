@@ -55,12 +55,12 @@ function Landing(props) {
     }, []);
     return(
         <div className="w-screen h-max">
-            {window.matchMedia("(max-width: 1024px)").matches ? 
+            {window.matchMedia("(min-width: 480px) and (max-width: 1024px)").matches ? 
                 <CommingSoon /> :
                 <div className="w-screen h-max scroll-smooth">
                     <Navbar scrolled={props.scrolled} visibleSection={visibleSections[0]}/>
                     <Home id='home' ref={homeRef}/>
-                    <div className="w-screen h-max bg-black flex flex-col justify-start items-center pb-32">
+                    <div className="w-screen h-max bg-black flex flex-col justify-start items-center pb-32 mp:pb-16">
                         <Service id='service' ref={serviceRef}/>
                         <Projects id='projects' ref={projectsRef}/>
                         <AboutUs id='aboutUs' ref={aboutUsRef}/>

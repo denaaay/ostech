@@ -22,6 +22,9 @@ export default {
         primaryFont: ['Afacad'],
         secondaryFont: ['Bebas Neue']
     },
+    screens: {
+      mp: {'min': '0px', 'max': '480px'},
+    },
   },
   plugins: [],
 }
