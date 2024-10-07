@@ -10,9 +10,13 @@ const Projects = React.forwardRef((props, ref) => {
     const [divHeight, setDivHeight] = useState(0);
 
     useEffect(() => {
+        const mobile = window.matchMedia("(max-width: 480px)").matches
+
         const updateHeight = () => {
-            if (scrollableRef.current) {
+            if (scrollableRef.current && !mobile) {
               setDivHeight(scrollableRef.current.clientHeight);
+            } else if (mobile) {
+                setDivHeight('max-content')
             }
           };
       
@@ -41,7 +45,14 @@ const Projects = React.forwardRef((props, ref) => {
             // const maxScrollLeft = scrollWidth - clientWidth;
 
             // Pastikan maxScrollLeft tidak negatif
-            const newThumbPosition = (scrollLeft / scrollWidth) * 150;
+            let rate = 0
+            if (window.matchMedia("(max-width: 480px)").matches) {
+                rate = 250
+            } else {
+                rate = 150
+            }
+
+            const newThumbPosition = (scrollLeft / scrollWidth) * rate;
             setThumbPosition(newThumbPosition);
         };
 
@@ -57,13 +68,13 @@ const Projects = React.forwardRef((props, ref) => {
     }, [thumbWidth]);
 
     return(
-        <div className="w-full h-max pt-32 flex justify-center" id={props.id} ref={ref}>
-            <div className="w-[90vw] h-max bg-[#2B2B2B] rounded-lg flex flex-col p-14 gap-8">
+        <div className="w-full h-max pt-32 flex justify-center mp:pt-16" id={props.id} ref={ref}>
+            <div className="w-[90vw] h-max bg-[#2B2B2B] rounded-lg flex flex-col p-14 gap-8 mp:p-4 mp:rounded">
                 {/* Project Title */}
-                <div className="w-full h-max font-primaryFont text-white text-6xl flex justify-between items-center">
-                    <div className="w-full h-max flex justify-start items-end gap-4">
+                <div className="w-full h-max font-primaryFont text-white text-6xl flex justify-between items-center mp:text-2xl">
+                    <div className="w-full h-max flex justify-start items-end gap-4 mp:gap-1">
                         <p>What we’ve develop</p>
-                        <div className="w-[45px] h-max">
+                        <div className="w-[45px] h-max mp:w-[25px]">
                             <img src={ArrowDown} alt="arrowDown.png" className="w-full h-full object-cover"/>
                         </div>
                     </div>
@@ -76,54 +87,54 @@ const Projects = React.forwardRef((props, ref) => {
                 </div>
 
                 {/* Project Content */}
-                <div className="w-full h-max flex gap-10">
+                <div className="w-full h-max flex gap-10 mp:flex-col">
                     {/* Project Content Detail */}
-                    <div className="w-[300px] flex flex-col justify-between items-start" style={{ height: divHeight }}>
+                    <div className="w-[300px] flex flex-col justify-between items-start mp:w-full" style={{ height: divHeight }}>
                         {/* <Button title='GO MORE'/> */}
                         <div></div>
-                        <p className="font-primaryFont text-xl text-justify">Your Vision Deserves a Platform. We Create Custom Websites that Reflect Your Brand, Engage Your Audience, and Propel Your Business Forward.</p>
+                        <p className="font-primaryFont text-xl text-justify mp:text-lg mp:font-thin">Your Vision Deserves a Platform. We Create Custom Websites that Reflect Your Brand, Engage Your Audience, and Propel Your Business Forward.</p>
                     </div>
 
                     {/* Project Content List */}
                     <div ref={scrollableRef} className="flex-1 h-max overflow-x-auto flex gap-8" style={{scrollbarWidth: 'none'}}>
 
-                        <div className="min-w-[300px] max-w-[300px] h-max bg-white rounded-xl p-4">
-                            <div className="w-full h-max flex flex-col items-center gap-6">
-                                <div className="w-full h-max flex flex-col items-center gap-2">
+                        <div className="min-w-[300px] max-w-[300px] h-max bg-white rounded-xl p-4 mp:p-2 mp:rounded mp:min-w-[200px] mp:max-w-[200px]">
+                            <div className="w-full h-max flex flex-col items-center gap-6 mp:gap-3">
+                                <div className="w-full h-max flex flex-col items-center gap-2 mp:gap-1">
                                     <p className="font-secondaryFont text-black text-2xl">Mojave</p>
-                                    <div className="w-full h-[20vh] bg-mojaveBackground bg-center bg-cover rounded-md"></div>
+                                    <div className="w-full h-[20vh] bg-mojaveBackground bg-center bg-cover rounded-md mp:h-[12vh] mp:rounded"></div>
                                 </div>
-                                <p className="font-primaryFont text-black text-lg text-center">We designed and built a company website for Mojave Home Collections.</p>
+                                <p className="font-primaryFont text-black text-lg text-center mp:text-base">We designed and built a company website for Mojave Home Collections.</p>
                             </div>
                         </div>
 
-                        <div className="min-w-[300px] max-w-[300px] h-max bg-white rounded-xl p-4">
-                            <div className="w-full h-max flex flex-col items-center gap-6">
-                                <div className="w-full h-max flex flex-col items-center gap-2">
+                        <div className="min-w-[300px] max-w-[300px] h-max bg-white rounded-xl p-4 mp:p-2 mp:rounded mp:min-w-[200px] mp:max-w-[200px]">
+                            <div className="w-full h-max flex flex-col items-center gap-6 mp:gap-3">
+                                <div className="w-full h-max flex flex-col items-center gap-2 mp:gap-1">
                                     <p className="font-secondaryFont text-black text-2xl">upcycle</p>
-                                    <div className="w-full h-[20vh] bg-upcycleBackground bg-center bg-cover rounded-md"></div>
+                                    <div className="w-full h-[20vh] bg-upcycleBackground bg-center bg-cover rounded-md mp:h-[12vh] mp:rounded"></div>
                                 </div>
-                                <p className="font-primaryFont text-black text-lg text-center">We designed and built a website for UpCycle, a brand new waste bank.</p>
+                                <p className="font-primaryFont text-black text-lg text-center mp:text-base">We designed and built a website for UpCycle, a brand new waste bank.</p>
                             </div>
                         </div>
 
-                        <div className="min-w-[300px] max-w-[300px] h-max bg-white rounded-xl p-4">
-                            <div className="w-full h-max flex flex-col items-center gap-6">
-                                <div className="w-full h-max flex flex-col items-center gap-2">
+                        <div className="min-w-[300px] max-w-[300px] h-max bg-white rounded-xl p-4 mp:p-2 mp:rounded mp:min-w-[200px] mp:max-w-[200px]">
+                            <div className="w-full h-max flex flex-col items-center gap-6 mp:gap-3">
+                                <div className="w-full h-max flex flex-col items-center gap-2 mp:gap-1">
                                     <p className="font-secondaryFont text-black text-2xl">Skillearn</p>
-                                    <div className="w-full h-[20vh] bg-skillearnBackground bg-center bg-cover rounded-md"></div>
+                                    <div className="w-full h-[20vh] bg-skillearnBackground bg-center bg-cover rounded-md mp:h-[12vh] mp:rounded"></div>
                                 </div>
-                                <p className="font-primaryFont text-black text-lg text-center">We designed a mobile app ui/ux for Skillearn.</p>
+                                <p className="font-primaryFont text-black text-lg text-center mp:text-base">We designed a mobile app ui/ux for Skillearn, an app for learning online.</p>
                             </div>
                         </div>
 
-                        <div className="min-w-[300px] max-w-[300px] h-max bg-white rounded-xl p-4">
-                            <div className="w-full h-max flex flex-col items-center gap-6">
-                                <div className="w-full h-max flex flex-col items-center gap-2">
+                        <div className="min-w-[300px] max-w-[300px] h-max bg-white rounded-xl p-4 mp:p-2 mp:rounded mp:min-w-[200px] mp:max-w-[200px]">
+                            <div className="w-full h-max flex flex-col items-center gap-6 mp:gap-3">
+                                <div className="w-full h-max flex flex-col items-center gap-2 mp:gap-1">
                                     <p className="font-secondaryFont text-black text-2xl">Support.in</p>
-                                    <div className="w-full h-[20vh] bg-supportinBackground bg-center bg-cover rounded-md"></div>
+                                    <div className="w-full h-[20vh] bg-supportinBackground bg-center bg-cover rounded-md mp:h-[12vh] mp:rounded"></div>
                                 </div>
-                                <p className="font-primaryFont text-black text-lg text-center">We designed the UI/UX design for Support.in, a mental health app.</p>
+                                <p className="font-primaryFont text-black text-lg text-center mp:text-base">We designed the UI/UX design for Support.in, a mental health app.</p>
                             </div>
                         </div>
                         
