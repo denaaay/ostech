@@ -123,62 +123,62 @@ const ContactUs = React.forwardRef((props, ref) => {
         <div className="w-full h-max pt-32 flex justify-center mp:pt-16" id={props.id} ref={ref}>
             <div className="w-[90vw] h-max flex flex-col bg-white rounded-xl">
                 {/* Contact Us Title */}
-                <div className="w-full h-max rounded-t-xl bg-[#2B2B2B] flex flex-col items-center gap-8 text-white p-10 mp:p-4 mp:gap-3">
-                    <p className="font-secondaryFont text-6xl mp:text-[40px]">have a big idea?</p>
-                    <p className="font-primaryFont text-4xl mp:text-3xl">Tell us about it.</p>
+                <div className="w-full h-max rounded-t-xl bg-[#2B2B2B] flex flex-col items-center gap-8 text-white p-10 mp:p-2 mp:gap-2">
+                    <p className="font-secondaryFont text-6xl mp:text-3xl">have a big idea?</p>
+                    <p className="font-primaryFont text-4xl mp:text-xl">Tell us about it.</p>
                 </div>
 
                 {/* Form Input for Contact */}
                 {window.matchMedia("(max-width: 480px)").matches ? 
                     <form onSubmit={submitIdea}>
-                        <div className="w-full h-max p-6 flex flex-col justify-start items-start gap-8">
+                        <div className="w-full h-max p-4 flex flex-col justify-start items-start gap-4">
 
                             {/* Input Name */}
-                            <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-2xl">
+                            <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-lg">
                                 <label>Name & Company</label>
-                                <input type="text" placeholder="Your Name" name="name" value={name} onChange={(e) => {setName(e.target.value)}} className="w-full focus:outline-none text-[#6b6b6b]"/>
+                                <input type="text" placeholder="Your Name" name="name" value={name} onChange={(e) => {setName(e.target.value)}} className="w-full focus:outline-none text-[#6b6b6b] text-base"/>
                                 <div className="w-full h-[1px] bg-primaryColor"></div>
                             </div>
 
                             {/* Input Email */}
-                            <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-2xl">
+                            <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-lg">
                                 <label>Your Email</label>
-                                <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} className="w-full focus:outline-none text-[#6b6b6b]" placeholder="dxxxxx@gmail.com"/>
+                                <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} className="w-full focus:outline-none text-[#6b6b6b] text-base" placeholder="dxxxxx@gmail.com"/>
                                 <div className="w-full h-[1px] bg-primaryColor"></div>
                             </div>
 
                             {/* Input Interest */}
-                            <div className="w-full h-max flex flex-col items-start gap-4 font-primaryFont text-primaryColor text-2xl">
+                            <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-lg">
                                 <p>I'm interest in...</p>
 
-                                <div className={`w-max h-max px-4 py-1 rounded-full text-xl font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${interest === 'Web Development' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => handleInterest(1)}>Web Development</div>
+                                <div className={`w-max h-max px-3 py-1 rounded-full text-sm font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${interest === 'Web Development' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => handleInterest(1)}>Web Development</div>
 
-                                <div className={`w-max h-max px-4 py-1 rounded-full text-xl font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${interest === 'UI/UX Design' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => {handleInterest(2)}}>UI/UX Design</div>
+                                <div className={`w-max h-max px-3 py-1 rounded-full text-sm font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${interest === 'UI/UX Design' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => {handleInterest(2)}}>UI/UX Design</div>
                                 
-                                <div className={`w-max h-max px-4 py-1 rounded-full text-xl font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${interest === 'App Development' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => {handleInterest(3)}}>App Development</div>
+                                <div className={`w-max h-max px-3 py-1 rounded-full text-sm font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${interest === 'App Development' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => {handleInterest(3)}}>App Development</div>
                             </div>
 
                             {/* Input Budget */}
-                            <div className="w-full h-max flex flex-col items-start gap-4 font-primaryFont text-primaryColor text-2xl">
+                            <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-lg">
                                 <p>Project Budget (Rupiah)</p>
-                                <div className={`w-max h-max px-4 py-1 rounded-full text-xl font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${budget === 'Under Rp5.000.000' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => handleBudget(1)}>Under Rp5.000.000</div>
+                                <div className={`w-max h-max px-3 py-1 rounded-full text-sm font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${budget === 'Under Rp5.000.000' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => handleBudget(1)}>Under Rp5.000.000</div>
 
-                                <div className={`w-max h-max px-4 py-1 rounded-full text-xl font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${budget === 'Rp5.000.000 - Rp10.000.000' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => {handleBudget(2)}}>Rp5.000.000 - Rp10.000.000</div>
+                                <div className={`w-max h-max px-3 py-1 rounded-full text-sm font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${budget === 'Rp5.000.000 - Rp10.000.000' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => {handleBudget(2)}}>Rp5.000.000 - Rp10.000.000</div>
 
-                                <div className={`w-max h-max px-4 py-1 rounded-full text-xl font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${budget === 'Rp10.000.000+' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => {handleBudget(3)}}>Rp10.000.000+</div>
+                                <div className={`w-max h-max px-3 py-1 rounded-full text-sm font-primaryFont border-[1px] cursor-pointer hover:shadow-lg ${budget === 'Rp10.000.000+' ? 'bg-primaryColor border-transparent text-white cursor-default' : 'bg-white border-primaryColor text-primaryColor'})`} onClick={() => {handleBudget(3)}}>Rp10.000.000+</div>
                             </div>
 
                             {/* Input Idea */}
-                            <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-2xl">
+                            <div className="w-full h-max flex flex-col items-start gap-1 font-primaryFont text-primaryColor text-lg">
                                 <label>Tell us more about this project</label>
-                                <input type="text" name="message" value={message} onChange={(e) => {setMessage(e.target.value)}} className="w-full focus:outline-none font-thin text-[#6b6b6b]" placeholder="Something about your idea"/>
+                                <input type="text" name="message" value={message} onChange={(e) => {setMessage(e.target.value)}} className="w-full focus:outline-none font-thin text-[#6b6b6b] text-base" placeholder="Something about your idea"/>
                                 <div className="w-full h-[1px] bg-primaryColor"></div>
                             </div>
 
                             {/* Submit Button */}
-                            <div className="w-full h-max flex flex-col items-center font-primaryFont text-primaryColor text-2xl gap-2">
+                            <div className="w-full h-max flex flex-col items-center font-primaryFont text-primaryColor text-base gap-1">
                                 <p>SUBMIT YOUR BIG IDEA</p>
-                                <button type="submit" className="w-full py-3 flex justify-center rounded-md border-[1px] border-primaryColor bg-secondaryColor text-white hover:bg-white hover:border-secondaryColor hover:text-secondaryColor hover:shadow-lg">Now !</button>
+                                <button type="submit" className="w-full py-2 flex justify-center rounded-md border-[1px] border-primaryColor bg-secondaryColor text-white hover:bg-white hover:border-secondaryColor hover:text-secondaryColor hover:shadow-lg">Now !</button>
                             </div>
                         </div>
                     </form> :
