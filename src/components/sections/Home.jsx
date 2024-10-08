@@ -23,7 +23,7 @@ const Home = React.forwardRef((props, ref) => {
             <div className="w-[75vw] h-[90vh] py-8 flex flex-col justify-between items-center gap-4 mp:w-[90vw] mp:h-max mp:mt-24 mp:gap-10 mp:py-0">
 
                 {/* Landing Tagline */}
-                <div className="w-full h-max font-secondaryFont text-[84px] leading-none flex flex-col mp:text-[40px] mp:items-center">
+                <div className="w-full h-max font-secondaryFont text-[84px] leading-none flex flex-col mp:text-4xl mp:items-center">
                     <p><span className="bg-gradient-to-r from-white to-secondaryColor bg-clip-text text-transparent transition-all duration-500">{words[currentWordIndex]}</span> website business</p>
                     <p>with us.</p>
                 </div>
