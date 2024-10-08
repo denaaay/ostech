@@ -18,7 +18,7 @@ const Home = React.forwardRef((props, ref) => {
     }, [])
 
     return(
-        <div className="w-screen h-screen bg-landingBackground bg-center bg-cover flex justify-center items-end mp:bg-black mp:bg-none mp:h-max" id={props.id} ref={ref}>
+        <div className="w-screen h-screen bg-landingBackground bg-center bg-cover flex justify-center items-end mp:h-max" id={props.id} ref={ref}>
             {/* Landing Content */}
             <div className="w-[75vw] h-[90vh] py-8 flex flex-col justify-between items-center gap-4 mp:w-[90vw] mp:h-max mp:mt-24 mp:gap-10 mp:py-0">
 

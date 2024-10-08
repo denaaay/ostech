@@ -19,7 +19,7 @@ function Footer() {
         <div className="w-screen h-max bg-[#2B2B2B] px-32 py-12 flex flex-col gap-16 mp:p-6 mp:gap-6">
             {/* Header Footer */}
             <div className="w-full h-max flex justify-between items-center">
-                <div className='w-max h-[50px] mp:h-[25px]'>
+                <div className='w-max h-[50px] mp:h-full mp:w-[25vw]'>
                     <img src={OstechIcon} alt="ostechIcon.png" className='w-full h-full object-cover'/>
                 </div>
                 <div className='w-max h-max flex items-center text-xl gap-16 flex justify-center text-white font-thin mp:gap-3 mp:text-xs'>

@@ -15,8 +15,8 @@ function Navbar(props) {
             } */}
 
             {/* Logo */}
-            <div className='flex-1 h-max flex justify-start mp:justfify-center'>
-                <div className='w-max h-[50px] mp:h-[35px]'>
+            <div className='flex-1 h-max flex justify-start mp:justify-start mp:items-center'>
+                <div className='w-max h-[50px] mp:h-full mp:w-[25vw]'>
                     <img src={OstechIcon} alt="ostechIcon.png" className='w-full h-full object-cover'/>
                 </div>
             </div>

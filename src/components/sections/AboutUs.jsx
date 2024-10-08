@@ -22,19 +22,19 @@ const AboutUs = React.forwardRef((props, ref) => {
                 {/* Additional Info */}
                 <div className="w-full h-max flex items-start gap-8 mp:gap-10 mp:flex-col">
                     {/* Goals */}
-                    <div className="flex-1 h-max bg-customBgGradient rounded-xl border-white border-[1px] flex flex-col items-center p-8 gap-8 mp:p-0 mp:gap-1 mp:border-none mp:items-start">
+                    <div className="flex-1 h-max bg-customBgGradient rounded-xl border-white border-[1px] flex flex-col items-center p-8 gap-8 mp:p-0 mp:gap-1 mp:border-none mp:items-start mp:bg-transparent">
                         <p className="font-secondaryFont text-white text-5xl mp:text-2xl">Goals<span className="text-secondaryColor">.</span></p>
                         <p className="font-primaryFont text-white text-2xl text-justify mp:text-base">Our goal is to empower businesses with innovative, tailored IT solutions. <span className={`text-blue-200 underline ${goal && 'hidden'}`} onClick={() => setGoal(true)}>read more</span> <span className={`${!goal && 'hidden'}`}>We focus on driving growth through expert web and mobile development, while delivering seamless user experiences with cutting-edge UI/UX design. Our commitment is to build lasting client partnerships by consistently delivering high-quality service and ensuring success in every project.</span></p>
                     </div>
 
                     {/* Values */}
-                    <div className="flex-1 h-max bg-customBgGradient rounded-xl border-white border-[1px] flex flex-col items-center p-8 gap-8 mp:p-0 mp:gap-1 mp:border-none mp:items-start">
+                    <div className="flex-1 h-max bg-customBgGradient rounded-xl border-white border-[1px] flex flex-col items-center p-8 gap-8 mp:p-0 mp:gap-1 mp:border-none mp:items-start mp:bg-transparent">
                         <p className="font-secondaryFont text-white text-5xl mp:text-2xl">Values<span className="text-secondaryColor">.</span></p>
                         <p className="font-primaryFont text-white text-2xl text-justify mp:text-base">We value <span className="text-secondaryColor">innovation</span> and strive to deliver cutting-edge solutions that drive client success. <span className={`text-blue-200 underline ${values && 'hidden'}`} onClick={() => setValues(true)}>read more</span> <span className={`${!values && 'hidden'}`}> We are <span className="text-secondaryColor">client-centric</span>, tailoring each project to meet specific needs. With a commitment to <span className="text-secondaryColor">excellence</span>, we ensure the highest quality in every service we provide. Through <span className="text-secondaryColor">collaboration</span>, we build strong partnerships, always grounded in <span className="text-secondaryColor">integrity</span> and trust. </span></p>
                     </div>
 
                     {/* Team */}
-                    <div className="flex-1 h-max bg-customBgGradient rounded-xl border-white border-[1px] flex flex-col items-center p-8 gap-8 mp:p-0 mp:gap-1 mp:border-none mp:items-start">
+                    <div className="flex-1 h-max bg-customBgGradient rounded-xl border-white border-[1px] flex flex-col items-center p-8 gap-8 mp:p-0 mp:gap-1 mp:border-none mp:items-start mp:bg-transparent">
                         <p className="font-secondaryFont text-white text-5xl mp:text-2xl">Team<span className="text-secondaryColor">.</span></p>
                         <p className="font-primaryFont text-white text-2xl text-justify mp:text-base">Our team consists of experienced professionals specializing in web and mobile development, as well as UI/UX design. <span className={`text-blue-200 underline ${team && 'hidden'}`} onClick={() => setTeam(true)}>read more</span> <span className={`${!team && 'hidden'}`}> Each member is an expert in their field, bringing a high level of skill and creativity to every project. Together, we collaborate closely to deliver solutions that align with our goals and values, ensuring the highest level of client satisfaction.</span></p>
                     </div>
