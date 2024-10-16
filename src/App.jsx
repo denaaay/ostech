@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import { useEffect, useState } from 'react';
 import './global.css';
+import Portfolios from './pages/Portfolios';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,6 +31,7 @@ function App() {
     <div className='bg-primary text-white overflow-x-hidden scroll-smooth font-poppins'>
       <Routes>
         <Route path='/' element={<Landing scrolled={scrolled}/>}/>
+        <Route path='/portfolios' element={<Portfolios scrolled={scrolled}/>}/>
       </Routes>
     </div>
   )

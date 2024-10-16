@@ -5,14 +5,6 @@ import SidebarButton from '../../assets/icon/sidebarButton.png';
 function Navbar(props) {
     return(
         <div className={`w-screen h-max fixed flex justify-between items-center font-primaryFont text-black py-6 px-12 z-50 ${props.scrolled && 'bg-black'} transition duration-500 ease-linear mp:px-4 mp:py-4`}>
-            {/* Sidebar Button on Mobile
-            {window.matchMedia("(max-width: 480px)").matches && 
-                <div className='flex-1 h-max flex justify-start'>
-                    <div className='w-max h-[35px]'>
-                        <img src={SidebarButton} alt="sidebarButton.png" className='w-full h-full object-cover'/>
-                    </div> 
-                </div>
-            } */}
 
             {/* Logo */}
             <div className='flex-1 h-max flex justify-start mp:justify-start mp:items-center'>
