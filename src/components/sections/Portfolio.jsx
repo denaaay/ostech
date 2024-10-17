@@ -1,8 +1,20 @@
 import ArrowDown from '../../assets/icon/arrowDown.png';
+import MojaveLogo from '../../assets/images/portfolios/mojave/mojaveLogo.png';
+import SeenLogo from '../../assets/images/portfolios/seen/seenLogo.png';
+import SkillearnLogo from '../../assets/images/portfolios/skillearn/skillearnLogo.png';
+import UpcycleLogo from '../../assets/images/portfolios/upcycle/upcycleLogo.png';
+import HacktivLogo from '../../assets/images/provenBy/hacktiv8Logo.png';
+import MSIBSkilvulLogo from '../../assets/images/provenBy/msibSkilvulLogo.png';
+import RuangguruLogo from '../../assets/images/provenBy/ruangguruLogo.png';
+import GotoImpactLogo from '../../assets/images/provenBy/gotoImpactLogo.png';
+import BluebirdLogo from '../../assets/images/provenBy/bluebirdLogo.png';
 
 function Portfolio() {
+    const provenList1 = [MojaveLogo, SeenLogo, SkillearnLogo, UpcycleLogo, HacktivLogo]
+    const provenList2 = [MSIBSkilvulLogo, RuangguruLogo, GotoImpactLogo, BluebirdLogo]
+
     return (
-        <div className="w-[90vw] h-max bg-[#2B2B2B] rounded-xl flex flex-col justify-start items-center p-12 gap-10">
+        <div className="w-[90vw] h-max bg-[#2B2B2B] rounded-xl flex flex-col justify-start items-center p-16 gap-10">
 
             {/* Title Content */}
             <div className="w-full h-max flex flex-col justify-between items-start gap-16 font-primaryFont">
@@ -64,8 +76,35 @@ function Portfolio() {
                 </div>
             </div>
 
-            {/* Proven By */}
+            {/* Proven By & Client */}
+            <div className='w-full h-max gap-12 flex flex-col justify-start items-center mt-12'>
 
+                {/* Title Proven By & Client */}
+                <div className='w-full h-max flex justify-center'>
+                    <p className="font-secondaryFont text-white text-5xl mp:text-4xl">Our Client & proven by</p>
+                </div>
+
+                {/* Content Proven By & Client 1 */}
+                <div className='w-[80%] h-max grid grid-cols-5 gap-16 items-center'>
+                    {provenList1.map((data, index) => {
+                        return <div key={index}>
+                            <div className='w-full h-max'>
+                                <img src={data} alt={`${data}.png`} className='w-full h-full object-cover'/>
+                            </div>
+                        </div>
+                    })}
+                </div>
+
+                <div className='w-[80%] h-max grid grid-cols-4 gap-16 items-center'>
+                    {provenList2.map((data, index) => {
+                        return <div key={index}>
+                            <div className='w-full h-max'>
+                                <img src={data} alt={`${data}.png`} className='w-full h-full object-cover'/>
+                            </div>
+                        </div>
+                    })}
+                </div>
+            </div>
         </div>
     );
 }
